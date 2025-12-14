@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudos</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Calculadora de compras</title>
 </head>
 <body>
-    
+    <div class="caixa">
+        <h2>🛒 Mercadinho</h2>
+        
+        <input type="number" id="input-preco" placeholder="Valor (R$)">
+        <button id="btn-add">+</button>
+
+        <ul id="lista-produtos">
+            </ul>
+
+        <div class="total-box">
+            Total: R$ <span id="valor-total">0.00</span>
+        </div>
+    </div>
 </body>
 </html>
