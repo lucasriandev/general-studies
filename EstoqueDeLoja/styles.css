@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  padding: 40px;
+  background: #f5f6fa;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #2f3640;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #7f8fa6;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #dcdde1;
+  border-radius: 10px;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: #f1f2f6;
+  border-bottom: 1px solid #dcdde1;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+span.preco {
+  font-weight: bold;
+  color: #273c75;
+}
