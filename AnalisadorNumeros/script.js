@@ -36,10 +36,8 @@ botaoAnalisar.addEventListener('click', () => {
         
         if (item > maior) {
             maior = item 
-        }
-        
-        if (item < menor) {
-            menor = item 
+        } else if (item < menor){
+            menor = item
         }
     })
     spanMaior.innerText = maior
