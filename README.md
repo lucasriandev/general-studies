@@ -11,7 +11,7 @@
   <img src="https://github.com/user-attachments/assets/d26162f7-2a8f-44c0-a962-edbfcff44a73" width="70%">
   <h1>Estoque</h1>
   <p>Cadastro de Produtos</p>
-  <img src="https://github.com/user-attachments/assets/0c22ce47-f97e-429d-97d9-c40e40ff292a" width="70%">
+  <img src="https://github.com/user-attachments/assets/63957d4e-3f24-4c4d-9e12-b0c7e0fb99c8" width="70%">
   <h1>Nike</h1>
   <p>Evento de cores</p>
   <img src="https://github.com/user-attachments/assets/80d5d598-1e71-4ed3-a17b-7af5f66d0b9b" width="70%">
@@ -19,3 +19,4 @@
   <p>Analise os numeros</p>
   <img src="https://github.com/user-attachments/assets/5c4c38fa-9a93-4a2a-a59c-f462f2509c7b" width="70%">
 </div>
+
