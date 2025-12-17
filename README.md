@@ -3,6 +3,9 @@
   <h1>AnalisadorNumeros</h1>
   <p>Analise os números e classifique por menor ou maior.</p>
   <img src="https://github.com/user-attachments/assets/c685ca1d-71d6-447f-b43b-e5cf2bd091ce" width="70%">
+  <h1>API Pokemon</h1>
+  <p>Buscando dados em api</p>
+  <img src="https://github.com/user-attachments/assets/b119d2d3-79af-4117-87d4-efce91c7d92a" width="70%">
   <h1>Carrinho</h1>
   <p>Some as compras</p>
   <img src="https://github.com/user-attachments/assets/d26162f7-2a8f-44c0-a962-edbfcff44a73" width="70%">
