@@ -5,6 +5,25 @@ const cadastrar = document.querySelector("#btn-add");
 
 let estoque = [];
 
+function mostrarNaTela(listaRecebida) {
+  listaProdutos.innerHTML = "";
+  listaRecebida.forEach((item, index) => {
+    listaProdutos.innerHTML += `
+            <li>
+                <span>${item.nome}</span>
+                <span>R$${item.preco}</span>
+                
+                <button onclick="deletarProduto(${index})" style="background: red; padding: 5px; margin-left: 10px;">X</button>
+            </li>
+        `;
+  });
+}
+
+function deletarProduto(index) {
+  estoque.splice(index, 1);
+  mostrarNaTela(estoque);
+}
+
 cadastrar.addEventListener("click", () => {
   const produto = {
     nome: ipNome.value,
@@ -14,9 +33,7 @@ cadastrar.addEventListener("click", () => {
 
   listaProdutos.innerHTML = "";
 
-  estoque.forEach((item) => {
-    listaProdutos.innerHTML += `<li><span>${item.nome}</span><span>R$${item.preco}</span></li>`;
-  });
+  mostrarNaTela(estoque);
 
   ipNome.value = "";
   ipPreco.value = "";
@@ -27,11 +44,8 @@ const filtrar = document.querySelector("#btn-filtro");
 filtrar.addEventListener("click", () => {
   listaProdutos.innerHTML = "";
 
-  estoque.forEach((item) => {
-    if (item.preco < 100) {
-      listaProdutos.innerHTML += `<li><span>${item.nome}</span><span>R$${item.preco}</span></li>`;
-    }
-  });
+  const listaBaratos = estoque.filter((item) => item.preco < 100);
+  mostrarNaTela(listaBaratos);
 });
 
 const todos = document.querySelector("#btn-todos");
@@ -39,7 +53,5 @@ const todos = document.querySelector("#btn-todos");
 todos.addEventListener("click", () => {
   listaProdutos.innerHTML = "";
 
-  estoque.forEach((item) => {
-    listaProdutos.innerHTML += `<li><span>${item.nome}</span><span>R$${item.preco}</span></li>`;
-  });
+  mostrarNaTela(estoque);
 });
