@@ -5,6 +5,15 @@ const cadastrar = document.querySelector("#btn-add");
 
 let estoque = [];
 
+if (localStorage.getItem("Meu estoque")) {
+  estoque = JSON.parse(localStorage.getItem("Meu estoque"));
+  mostrarNaTela(estoque);
+}
+
+function atualizarBanco() {
+  localStorage.setItem("Meu estoque", JSON.stringify(estoque));
+}
+
 function mostrarNaTela(listaRecebida) {
   listaProdutos.innerHTML = "";
   listaRecebida.forEach((item, index) => {
@@ -22,9 +31,15 @@ function mostrarNaTela(listaRecebida) {
 function deletarProduto(index) {
   estoque.splice(index, 1);
   mostrarNaTela(estoque);
+  atualizarBanco();
 }
 
 cadastrar.addEventListener("click", () => {
+  if (ipNome.value === "" || ipPreco.value === "") {
+    alert("Preencha tudo!");
+    return;
+  }
+
   const produto = {
     nome: ipNome.value,
     preco: Number(ipPreco.value),
@@ -34,6 +49,7 @@ cadastrar.addEventListener("click", () => {
   listaProdutos.innerHTML = "";
 
   mostrarNaTela(estoque);
+  atualizarBanco();
 
   ipNome.value = "";
   ipPreco.value = "";
