@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #f1f2f6;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+h1 {
+  color: #2d3436;
+}
+
+p {
+  font-size: 18px;
+  color: #636e72;
+  min-height: 50px;
+}
