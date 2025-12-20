@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  background-color: #dfe6e9;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #2d3436;
+  margin: 0;
+}
+
+h4 {
+  color: #0984e3;
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+p {
+  font-style: italic;
+  color: #636e72;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
