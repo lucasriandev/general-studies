@@ -22,14 +22,14 @@ const clientes = [
 
 let indice = 0;
 
-function carregarPerguntas() {
+function carregarClientes() {
   const Atual = clientes[indice];
   nome.innerText = Atual.nome;
   cargo.innerText = Atual.cargo;
   texto.innerText = Atual.texto;
 }
 
-carregarPerguntas();
+carregarClientes();
 
 const botao = document.querySelector("#btn-proximo");
 
@@ -40,5 +40,5 @@ botao.addEventListener("click", () => {
     indice = 0;
   }
 
-  carregarPerguntas();
+  carregarClientes();
 });
