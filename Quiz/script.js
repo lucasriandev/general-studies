@@ -32,6 +32,8 @@ function carregarPergunta() {
   botoes[3].innerText = carta.alternativas[3];
 }
 
+const resultado = document.querySelector("#resultado");
+
 function verificarResposta(cliqueDoUsuario) {
   const carta = perguntas[indiceAtual];
 
@@ -47,7 +49,7 @@ function verificarResposta(cliqueDoUsuario) {
   if (indiceAtual < perguntas.length) {
     carregarPergunta();
   } else {
-    alert("Fim de Jogo! Você fez " + pontos + " pontos.");
+    resultado.innerHTML = `Você fez ${pontos} pontos!`;
 
     indiceAtual = 0;
     pontos = 0;
