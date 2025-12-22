@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <title>Jokenpo</title>
+  </head>
+  <body>
+    <div class="placar">
+      Você: <span id="pontos-usuario">0</span> | CPU:
+      <span id="pontos-cpu">0</span>
+    </div>
+
+    <div class="resultado" id="mensagem">Escolha sua arma!</div>
+
+    <button onclick="jogar('pedra')">👊</button>
+    <button onclick="jogar('papel')">✋</button>
+    <button onclick="jogar('tesoura')">✌️</button>
+  </body>
+</html>
