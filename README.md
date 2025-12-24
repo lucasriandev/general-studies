@@ -24,6 +24,9 @@
   <h1>Quiz</h1>
   <p>Perguntas e respostas</p>
   <img src="https://github.com/user-attachments/assets/34eb8334-d6fb-43c9-a2c9-a6b3b5e5b5d5" width="70%">
+  <h1>Rick Morty API</h1>
+  <p>Buscando dados em APi</p>
+  <img src="https://github.com/user-attachments/assets/3d081372-001b-4a80-b7b0-4313777ef1b7" width="70%">
   <h1>Seletor</h1>
   <p>Vitrine</p>
   <img src="https://github.com/user-attachments/assets/a9e6cb93-6aa6-4446-b8d2-fcfe9702b63c" width="70%">
@@ -34,5 +37,6 @@
   <p>Par Impar</p>
   <img src="https://github.com/user-attachments/assets/5c4c38fa-9a93-4a2a-a59c-f462f2509c7b" width="70%">
 </div>
+
 
 
