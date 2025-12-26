@@ -26,6 +26,8 @@ async function api() {
 
     spanDolar.innerText = "$" + totalDolar.toFixed(2);
     spanEuro.innerText = "$" + totalEuro.toFixed(2);
+
+    input.value = "";
   } catch (error) {
     console.log(error);
   }
