@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <title>Barraca de Maçãs</title>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/415/415733.png"
+        alt="Maçã"
+      />
+      <h2>Maçã da Mônica</h2>
+      <p>Preço: R$ 2,00 cada</p>
+
+      <label>Quantas você quer?</label><br />
+      <input type="number" id="qtd" oninput="calcularTotal()" />
+
+      <span id="total">R$ 0,00</span>
+    </div>
+  </body>
+</html>
