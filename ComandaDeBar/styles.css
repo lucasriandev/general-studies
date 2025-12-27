@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #2d3436;
+  color: white;
+}
+
+.card {
+  background: #636e72;
+  padding: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  width: 300px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  background: #ffeaa7;
+  color: #2d3436;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.2s;
+
+  &:hover {
+    background: #fab1a0;
+  }
+}
+
+#visor {
+  background: black;
+  color: #55efc4;
+  padding: 10px;
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid #55efc4;
+}
