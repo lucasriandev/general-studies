@@ -3,7 +3,7 @@
   <h1>Rick Morty API</h1>
   <p>Buscando dados em APi</p>
   <img src="https://github.com/user-attachments/assets/3d081372-001b-4a80-b7b0-4313777ef1b7" width="70%">
-  <h1>Conversor de Cripto</h1>
+  <h1>Conversor</h1>
   <p>Conversor de moedas</p>
   <img src="https://github.com/user-attachments/assets/0c9df771-199e-4f38-9ada-bb7fae85f7ff" width="70%">
   <h1>AnalisadorNumeros</h1>
@@ -46,6 +46,7 @@
   <p>Par Impar</p>
   <img src="https://github.com/user-attachments/assets/5c4c38fa-9a93-4a2a-a59c-f462f2509c7b" width="70%">
 </div>
+
 
 
 
