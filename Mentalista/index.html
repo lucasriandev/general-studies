@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./script.js" defer></script>
+    <title>O Mentalista</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+      }
+      .caixa {
+        background: #34495e;
+        padding: 40px;
+        border-radius: 15px;
+        display: inline-block;
+        width: 300px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      input {
+        padding: 15px;
+        font-size: 20px;
+        width: 60px;
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+      }
+      button {
+        padding: 15px 30px;
+        background: #e67e22;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      button:hover {
+        background: #d35400;
+      }
+
+      #mensagem {
+        font-size: 24px;
+        margin-top: 20px;
+        font-weight: bold;
+        min-height: 40px;
+        color: #f1c40f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caixa">
+      <h1>🔮 Adivinhe (1 a 10)</h1>
+
+      <input type="number" id="chute" min="1" max="10" />
+      <br />
+      <button id="btn-chutar">Chutar</button>
+
+      <p id="mensagem">Estou pensando em um número...</p>
+    </div>
+  </body>
+</html>
