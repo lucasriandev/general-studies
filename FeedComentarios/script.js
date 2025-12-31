@@ -23,7 +23,7 @@ function central() {
   btnDelete.innerText = "❌";
 
   btnDelete.addEventListener("click", () => {
-    btnDelete.classList.toggle("btn-delete");
+    novaDIV.remove();
   });
 
   novaDIV.appendChild(h3);
@@ -31,6 +31,9 @@ function central() {
   novaDIV.appendChild(btnDelete);
 
   feed.appendChild(novaDIV);
+
+  inputMsg.value = "";
+  inputNome.value = "";
 }
 
 publicar.addEventListener("click", central);
