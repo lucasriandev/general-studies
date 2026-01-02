@@ -28,3 +28,15 @@ iniciar.addEventListener("click", () => {
     atualizarVisor();
   }, 1000);
 });
+
+pausar.addEventListener("click", () => {
+  clearInterval(intervalo);
+  cronometrando = false;
+});
+
+zerar.addEventListener("click", () => {
+  clearInterval(intervalo);
+  segundos = 0;
+  atualizarVisor();
+  cronometrando = false;
+});
