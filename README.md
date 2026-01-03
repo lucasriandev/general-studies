@@ -45,7 +45,11 @@
   <h1>Separador</h1>
   <p>Par Impar</p>
   <img src="https://github.com/user-attachments/assets/5c4c38fa-9a93-4a2a-a59c-f462f2509c7b" width="70%">
+  <h1>Calculadora IMC</h1>
+  <p>Calcule seu peso</p>
+  <img src="https://github.com/user-attachments/assets/71b0e5aa-ecd7-4741-849f-853ad4993a6e" width="70%">
 </div>
+
 
 
 
