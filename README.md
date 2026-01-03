@@ -48,7 +48,11 @@
   <h1>Calculadora IMC</h1>
   <p>Calcule seu peso</p>
   <img src="https://github.com/user-attachments/assets/71b0e5aa-ecd7-4741-849f-853ad4993a6e" width="70%">
+  <h1>Mentalista</h1>
+  <p>Adivinhação</p>
+  <img src="https://github.com/user-attachments/assets/528b1bb7-f35c-43f8-b55a-4c729ac5fadc" width="70%">
 </div>
+
 
 
 
