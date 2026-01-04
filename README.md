@@ -6,6 +6,9 @@
   <h1>Conversor</h1>
   <p>Conversor de moedas</p>
   <img src="https://github.com/user-attachments/assets/0c9df771-199e-4f38-9ada-bb7fae85f7ff" width="70%">
+  <h1>Lista de metas</h1>
+  <p>Adicione suas metas</p>
+  <img src="https://github.com/user-attachments/assets/9c8c8bb6-c757-478c-947e-9c99b333c663" width="70%">
   <h1>AnalisadorNumeros</h1>
   <p>Analise os números e classifique por menor ou maior.</p>
   <img src="https://github.com/user-attachments/assets/c685ca1d-71d6-447f-b43b-e5cf2bd091ce" width="70%">
@@ -52,6 +55,7 @@
   <p>Adivinhação</p>
   <img src="https://github.com/user-attachments/assets/528b1bb7-f35c-43f8-b55a-4c729ac5fadc" width="70%">
 </div>
+
 
 
 
