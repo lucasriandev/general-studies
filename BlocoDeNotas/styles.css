@@ -1,0 +1,25 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff2cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+h2 {
+  color: #d68910;
+}
+
+textarea {
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  border: 2px solid #f1c40f;
+  border-radius: 10px;
+  font-size: 18px;
+  background: #fff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  outline: none;
+  resize: none; /* Não deixa esticar */
+}
