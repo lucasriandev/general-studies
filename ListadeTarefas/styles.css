@@ -1,0 +1,92 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  color: white;
+}
+.container {
+  background: #353b48;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  text-align: center;
+  color: #fbc531;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+button#btn-add {
+  background: #4cd137;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #2f3640;
+  transition: 0.2s;
+}
+button#btn-add:hover {
+  background: #44bd32;
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #273c75;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  animation: fadeIn 0.3s ease;
+}
+
+.btn-delete {
+  background: #e84118;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.btn-delete:hover {
+  background: #c23616;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
