@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #6c5ce7;
+  color: white;
+}
+.card {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  width: 300px;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+}
+button {
+  padding: 10px;
+  cursor: pointer;
+  background: #00b894;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+button#btn-sortear {
+  background: #e17055;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+li {
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+}
+
+#resultado {
+  font-size: 30px;
+  color: #d63031;
+  font-weight: bold;
+  margin-top: 20px;
+  min-height: 40px;
+}
