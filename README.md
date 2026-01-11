@@ -54,7 +54,11 @@
   <h1>Mentalista</h1>
   <p>Adivinhação</p>
   <img src="https://github.com/user-attachments/assets/528b1bb7-f35c-43f8-b55a-4c729ac5fadc" width="70%">
+  <h1>Comentarios</h1>
+  <p>Feed</p>
+  <img src="https://github.com/user-attachments/assets/c487396f-aeec-41c2-8120-c4d306551571" width="70%">
 </div>
+
 
 
 
