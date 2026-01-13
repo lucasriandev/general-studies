@@ -1,5 +1,5 @@
 <div align="center">
-﻿# General-Studies Projects<br>
+﻿# My daily studies on the basics of programming.<br>
   <h1>Rick Morty API</h1>
   <p>Buscando dados em APi</p>
   <img src="https://github.com/user-attachments/assets/3d081372-001b-4a80-b7b0-4313777ef1b7" width="70%">
@@ -58,6 +58,7 @@
   <p>Feed</p>
   <img src="https://github.com/user-attachments/assets/c487396f-aeec-41c2-8120-c4d306551571" width="70%">
 </div>
+
 
 
 
