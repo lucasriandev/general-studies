@@ -57,7 +57,11 @@
   <h1>Comentarios</h1>
   <p>Feed</p>
   <img src="https://github.com/user-attachments/assets/c487396f-aeec-41c2-8120-c4d306551571" width="70%">
+  <h1>Cronômetro</h1>
+  <p>Tempo</p>
+  <img src="https://github.com/user-attachments/assets/4bf0451d-6b51-484e-82e3-3914257a4129" width="70%">
 </div>
+
 
 
 
