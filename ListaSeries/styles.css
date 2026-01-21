@@ -1,10 +1,31 @@
 body {
   font-family: cursive;
+  background: #ff69b4;
+  color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: violet;
-  color: white;
-  border: 2px solid;
+  padding-top: 50px;
+}
+
+.container {
+  background: #ff69b4;
   padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 10px 20px 10px;
+  text-align: center;
+}
+
+.input-group {
+  gap: 10px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
