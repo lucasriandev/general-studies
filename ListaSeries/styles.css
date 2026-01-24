@@ -1,57 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: cursive;
-  background: #ff69b4;
+  font-family: "Comic Sans MS", cursive;
+  background: linear-gradient(135deg, #ff69b4, #ff85c2);
   color: white;
+  min-height: 100vh;
+
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  padding-top: 50px;
+  align-items: flex-start;
+  padding-top: 80px;
 }
 
 .container {
-  background: #ff69b4;
+  background: #ff4fa3;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 400px;
-  box-shadow: 0 10px 20px 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
   text-align: center;
 }
 
+.container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
 .input-group {
+  display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  display: flex;
 }
 
 input {
   flex: 1;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: 8px;
   border: none;
   outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #b24a7e;
 }
 
 button#btn-add {
-  background: yellow;
+  background: #ffe600;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  color: rgb(80, 80, 198);
+  color: #4a4ac6;
   width: 100px;
-  display: flex;
-  justify-content: center;
+  transition: all 0.3s ease;
+}
 
-  &:hover {
-    background: #b24a7e;
-    color: white;
-  }
+button#btn-add:hover {
+  background: #b24a7e;
+  color: white;
+  transform: scale(1.05);
 }
 
 ul {
-  background-color: #ff69b4;
-  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 14px;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }

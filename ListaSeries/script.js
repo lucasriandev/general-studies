@@ -12,6 +12,9 @@ function desenharNaTela() {
     const novoBtn = document.createElement("button");
     novoBtn.innerText = "X";
     novoBtn.style.marginLeft = "10px";
+    novoBtn.style.background = "red";
+    novoBtn.style.color = "white";
+    novoBtn.style.padding = "5px";
 
     novoBtn.addEventListener("click", () => {
       minhasSeries.splice(index, 1);
