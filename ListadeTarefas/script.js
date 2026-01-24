@@ -1,47 +1,44 @@
-const input = document.querySelector("#input-tarefa");
-const adicionar = document.querySelector("#btn-add");
-const lista = document.querySelector("#lista");
+let tarefas = JSON.parse(localStorage.getItem("TarefasNovas")) || [];
 
-let minhaLista = [];
+const ul = document.querySelector("#lista");
 
-const listaguardada = localStorage.getItem("lista");
+function mostrarNaTela() {
+  ul.innerHTML = "";
 
-if (listaguardada) {
-  minhaLista = JSON.parse(listaguardada);
-}
+  tarefas.forEach((tarefa, index) => {
+    const novoLi = document.createElement("li");
+    novoLi.innerText = tarefa;
 
-minhaLista.forEach((item) => {
-  desenharTarefas(item);
-});
+    const btnApagar = document.createElement("button");
+    btnApagar.innerText = "X";
+    btnApagar.classList.add("btn-delete");
 
-function desenharTarefas(texto) {
-  const novoLi = document.createElement("li");
-  novoLi.innerText = texto;
-
-  const novoBtn = document.createElement("button");
-  novoBtn.innerText = "❌";
-  novoBtn.classList.add("btn-delete");
-
-  novoBtn.addEventListener("click", () => {
-    novoLi.remove();
-    const posicao = minhaLista.indexOf(texto);
-
-    if (posicao !== -1) {
-      minhaLista.splice(posicao, 1);
-    }
-
-    localStorage.setItem("lista", JSON.stringify(minhaLista));
+    btnApagar.addEventListener("click", () => {
+      tarefas.splice(index, 1);
+      localStorage.setItem("TarefasNovas", JSON.stringify(tarefas));
+      mostrarNaTela();
+    });
+    novoLi.appendChild(btnApagar);
+    ul.appendChild(novoLi);
   });
-
-  novoLi.appendChild(novoBtn);
-  lista.appendChild(novoLi);
 }
 
+mostrarNaTela();
+
+const adicionar = document.querySelector("#btn-add");
+const input = document.querySelector("#input-tarefa");
 adicionar.addEventListener("click", () => {
   const valor = input.value;
+  if (valor === "") return;
 
-  minhaLista.push(valor);
-  desenharTarefas(valor);
+  tarefas.push(valor);
+  localStorage.setItem("TarefasNovas", JSON.stringify(tarefas));
+  mostrarNaTela();
+  input.value = "";
+});
 
-  localStorage.setItem("lista", JSON.stringify(minhaLista));
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    adicionar.click();
+  }
 });
