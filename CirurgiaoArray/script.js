@@ -13,6 +13,8 @@ function atualizarLista() {
 
     const novoBotao = document.createElement("button");
     novoBotao.innerText = "X";
+    novoBotao.style.padding = "5px";
+    novoBotao.style.color = "red";
 
     novoBotao.addEventListener("click", () => {
       playlist.splice(index, 1); //remove especificamente o botao clicado
