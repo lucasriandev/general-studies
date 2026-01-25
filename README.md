@@ -63,10 +63,14 @@
   <h1>Bloco de Notas</h1>
   <p>LocalStorage</p>
   <img src="https://github.com/user-attachments/assets/7213eb80-f21a-45c9-bdfa-c14d26018be2" width="70%">
+  <h1>Playlist</h1>
+  <p>Arrays</p>
+  <img src="https://github.com/user-attachments/assets/64549929-de7e-4ae6-85d4-7c1bf89b3455" width="70%">
   <h1>Galeria Automatica</h1>
   <p>Slide</p>
   <img src="https://github.com/user-attachments/assets/afaa2872-34fc-4e01-a124-c93132f3df0a" width="70%">
 </div>
+
 
 
 
