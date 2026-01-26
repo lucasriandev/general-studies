@@ -1,4 +1,4 @@
-<div align="center">
+![CarrinhoATUALIZADO](https://github.com/user-attachments/assets/ffd2d3f1-0227-410c-b484-8c9bdc46862e)<div align="center">
 ﻿# My daily studies on the basics of programming.<br>
   <h1>Rick Morty API</h1>
   <p>Buscando dados em APi</p>
@@ -20,7 +20,7 @@
   <img src="https://github.com/user-attachments/assets/b119d2d3-79af-4117-87d4-efce91c7d92a" width="70%">
   <h1>Carrinho</h1>
   <p>Some as compras</p>
-  <img src="https://github.com/user-attachments/assets/d26162f7-2a8f-44c0-a962-edbfcff44a73" width="70%">
+  <img src="https://github.com/user-attachments/assets/9bb841cb-8186-4e41-a00b-d9dd8961cb0d" width="70%">
   <h1>Comanda Digital</h1>
   <p>Comanda de bar</p>
   <img src="https://github.com/user-attachments/assets/939fd119-c10a-4415-be99-3db572525904" width="70%">
@@ -70,6 +70,7 @@
   <p>Slide</p>
   <img src="https://github.com/user-attachments/assets/afaa2872-34fc-4e01-a124-c93132f3df0a" width="70%">
 </div>
+
 
 
 
