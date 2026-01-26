@@ -1,4 +1,4 @@
-![CarrinhoATUALIZADO](https://github.com/user-attachments/assets/ffd2d3f1-0227-410c-b484-8c9bdc46862e)<div align="center">
+<div align="center">
 ﻿# My daily studies on the basics of programming.<br>
   <h1>Rick Morty API</h1>
   <p>Buscando dados em APi</p>
