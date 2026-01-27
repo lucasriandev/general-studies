@@ -3,6 +3,8 @@ const inputMsg = document.querySelector("#input-msg");
 const feed = document.querySelector("#feed1");
 const publicar = document.querySelector("#btn-publicar");
 
+let local = JSON.parse(localStorage.getItem("Usuario")) || [];
+
 function central() {
   if (inputNome.value === "" || inputMsg.value === "") {
     alert("Preencha todos os campos");
