@@ -3,39 +3,16 @@ const inputMsg = document.querySelector("#input-msg");
 const feed = document.querySelector("#feed1");
 const publicar = document.querySelector("#btn-publicar");
 
-let local = JSON.parse(localStorage.getItem("Usuario")) || [];
+let comentarios = JSON.parse(localStorage.getItem("Novidades")) || [];
 
-function central() {
-  if (inputNome.value === "" || inputMsg.value === "") {
-    alert("Preencha todos os campos");
-    return;
-  }
+function renderizar() {
+  feed.innerHTML = "";
 
-  const novaDIV = document.createElement("div");
-  novaDIV.classList.add("comentario");
-  novaDIV.addEventListener("click", () => {});
+  comentarios.forEach((item, index) => {
+    const novaDiv = document.createElement("div");
+    novaDiv.classList.add("comentarios");
 
-  const h3 = document.createElement("h3");
-  h3.innerText = inputNome.value;
-
-  const p = document.createElement("p");
-  p.innerText = inputMsg.value;
-
-  const btnDelete = document.createElement("button");
-  btnDelete.innerText = "❌";
-
-  btnDelete.addEventListener("click", () => {
-    novaDIV.remove();
+    const h3 = document.createElement("h3");
+    h3.innerText = item.usuario;
   });
-
-  novaDIV.appendChild(h3);
-  novaDIV.appendChild(p);
-  novaDIV.appendChild(btnDelete);
-
-  feed.appendChild(novaDIV);
-
-  inputMsg.value = "";
-  inputNome.value = "";
 }
-
-publicar.addEventListener("click", central);
