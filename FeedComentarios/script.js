@@ -4,6 +4,25 @@ const feed = document.querySelector("#feed1");
 const publicar = document.querySelector("#btn-publicar");
 
 let comentarios = JSON.parse(localStorage.getItem("Novidades")) || [];
+comentarios = Array.isArray(comentarios) ? comentarios : [];
+
+function publicarComentarios() {
+  if (inputNome.value === "" || inputMsg.value === "") {
+    alert("Campos vazios");
+    return;
+  }
+
+  const novoComentario = {
+    usuario: inputNome.value,
+    conteudo: inputMsg.value,
+  };
+
+  comentarios.push(novoComentario);
+  localStorage.setItem("Novidades", JSON.stringify(comentarios));
+
+  inputNome.value = "";
+  inputMsg.value = "";
+}
 
 function renderizar() {
   feed.innerHTML = "";
@@ -17,41 +36,5 @@ function renderizar() {
 
     const p = document.createElement("p");
     p.innerText = item.conteudo;
-
-    const btnDelete = document.createElement("button");
-    btnDelete.innerText = "❌";
-
-    btnDelete.addEventListener("click", () => {
-      comentarios.splice(index, 1);
-      localStorage.setItem("Novidades", JSON.stringify(comentarios));
-      renderizar();
-    });
-
-    novaDiv.append(h3, p, btnDelete);
-    feed.appendChild(novaDiv);
   });
 }
-
-publicar.addEventListener("click", () => {
-  if (inputNome.value === "" || inputMsg.value === "") {
-    alert("Campos vazios!");
-    return;
-  }
-
-  const novoComentarios = {
-    usuario: inputNome.value,
-    conteudo: inputMsg.value,
-  };
-
-  comentarios.push(novoComentarios);
-  localStorage.setItem("Novidades", JSON.stringify(comentarios));
-
-  inputNome.value = "";
-  inputMsg.value = "";
-
-  renderizar();
-});
-
-renderizar();
-
-localStorage.clear();
