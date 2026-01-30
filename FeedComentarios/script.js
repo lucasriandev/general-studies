@@ -22,6 +22,8 @@ function publicarComentarios() {
 
   inputNome.value = "";
   inputMsg.value = "";
+
+  renderizar();
 }
 
 function renderizar() {
@@ -36,5 +38,28 @@ function renderizar() {
 
     const p = document.createElement("p");
     p.innerText = item.conteudo;
+
+    const btnDelete = document.createElement("button");
+    btnDelete.innerText = "❌";
+
+    btnDelete.addEventListener("click", () => {
+      comentarios.splice(index, 1);
+      localStorage.setItem("Novidades", JSON.stringify(comentarios));
+      renderizar();
+    });
+
+    novaDiv.append(h3, p, btnDelete);
+    feed.appendChild(novaDiv);
   });
 }
+
+publicar.addEventListener("click", publicarComentarios);
+
+inputMsg.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    publicarComentarios();
+  }
+});
+
+renderizar();
