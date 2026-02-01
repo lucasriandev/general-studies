@@ -2,6 +2,8 @@ const input = document.querySelector("#nova-meta");
 const botao = document.querySelector("#btn-add");
 const lista = document.querySelector("#lista-metas");
 
+let metas = JSON.parse(localStorage.getItem("Metas")) || [];
+
 function central() {
   if (input.value === "") {
     alert("Digite uma meta");
