@@ -3,37 +3,51 @@ const botao = document.querySelector("#btn-add");
 const lista = document.querySelector("#lista-metas");
 
 let metas = JSON.parse(localStorage.getItem("Metas")) || [];
+metas = Array.isArray(metas) ? metas : [];
 
-function central() {
-  if (input.value === "") {
-    alert("Digite uma meta");
+function salvar() {
+  const valor = input.value;
+  if (valor === "") {
+    alert("Preencha suas metas");
     return;
   }
 
-  const novoItem = document.createElement("li");
-  novoItem.innerText = input.value;
+  metas.push(valor);
 
-  novoItem.addEventListener("click", () => {
-    novoItem.classList.toggle("riscado");
-  });
-
-  const btnDelete = document.createElement("button");
-  btnDelete.innerText = "❌";
-
-  btnDelete.addEventListener("click", () => {
-    novoItem.remove();
-  });
-
-  novoItem.appendChild(btnDelete);
-  lista.appendChild(novoItem);
+  localStorage.setItem("Metas", JSON.stringify(metas));
 
   input.value = "";
+
+  renderizar();
 }
 
-botao.addEventListener("click", central);
+function renderizar() {
+  lista.innerHTML = "";
+
+  metas.forEach((item, index) => {
+    const novoLi = document.createElement("li");
+    novoLi.innerText = item;
+
+    const novoBtn = document.createElement("button");
+    novoBtn.innerText = "❌";
+
+    novoBtn.addEventListener("click", () => {
+      metas.splice(index, 1);
+      localStorage.setItem("Metas", JSON.stringify(metas));
+      renderizar();
+    });
+
+    lista.append(novoLi, novoBtn);
+  });
+}
+
+botao.addEventListener("click", salvar);
+
+renderizar();
 
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    central();
+    e.preventDefault();
+    salvar();
   }
 });
