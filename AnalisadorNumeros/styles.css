@@ -1,72 +1,77 @@
- body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
-      background: #0984e3;
-      color: white;
-    }
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background: #0984e3;
+  color: white;
+}
 
-    .card {
-      background: white;
-      color: #333;
-      padding: 30px;
-      border-radius: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 400px;
-      width: 100%;
-      margin: auto;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+.card {
+  background: white;
+  color: #333;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 
-    input {
-      padding: 12px;
-      font-size: 18px;
-      border: 2px solid #ddd;
-      border-radius: 5px;
-      text-align: center;
-      outline: none;
-    }
+input {
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+}
 
-    input:focus {
-      border-color: #0984e3;
-    }
+input:focus {
+  border-color: #0984e3;
+}
 
-    button {
-      padding: 12px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+button {
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    #btn-add {
-      background: #00b894;
-      color: white;
-    }
+#btn-add {
+  background: #00b894;
+  color: white;
+}
 
-    #lista-visual {
-      margin: 20px 0;
-      font-size: 1.1rem;
-      color: #636e72;
-      text-align: left;
-      list-style: none;
-      padding-left: 0;
-    }
+#btn-remove {
+  background: #f15622;
+  color: white;
+}
 
-    #lista-visual li {
-      background: #dfe6e9;
-      padding: 8px;
-      border-radius: 5px;
-      margin-bottom: 6px;
-      font-style: normal;
-      color: #2d3436;
-    }
+#lista-visual {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  color: #636e72;
+  text-align: left;
+  list-style: none;
+  padding-left: 0;
+}
 
-    .placeholder {
-      font-style: italic;
-      color: #636e72;
-    }
+#lista-visual li {
+  background: #dfe6e9;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 6px;
+  font-style: normal;
+  color: #2d3436;
+}
+
+.placeholder {
+  font-style: italic;
+  color: #636e72;
+}
