@@ -45,3 +45,19 @@ botaoAnalisar.addEventListener("click", () => {
   spanMaior.innerText = maior;
   spanMenor.innerText = menor;
 });
+
+const btnRemove = document.querySelector("#btn-remove");
+btnRemove.addEventListener("click", () => {
+  localStorage.removeItem("Numeros");
+  listaNumeros = [];
+  spanMaior.innerText = "";
+  spanMenor.innerText = "";
+  listavisual.innerHTML = "";
+});
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    botaoAdd.click();
+  }
+});
