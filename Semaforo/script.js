@@ -1,10 +1,10 @@
 const cores = ["red", "yellow", "green"];
-let indiceAtual = 0;
+let indiceAtual = Number(localStorage.getItem("IndiceCor")) || 0;
 
 const luz = document.querySelector("#luz");
 const botao = document.querySelector("#btn-mudar");
 
-luz.style.background = cores[0];
+luz.style.background = cores[indiceAtual];
 
 botao.addEventListener("click", () => {
   indiceAtual++;
@@ -14,4 +14,6 @@ botao.addEventListener("click", () => {
   }
 
   luz.style.background = cores[indiceAtual];
+
+  localStorage.setItem("IndiceCor", indiceAtual);
 });
