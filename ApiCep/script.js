@@ -48,3 +48,18 @@ cepInput.addEventListener("keydown", (e) => {
     botao.click();
   }
 });
+
+const recuperar = document.querySelector("#btn-recuperar");
+const apagar = document.querySelector("#btn-apagar");
+
+recuperar.addEventListener("click", () => {
+  cepInput.value = informacoes;
+});
+
+apagar.addEventListener("click", () => {
+  localStorage.removeItem("CepCidade");
+  cepInput.value = "";
+  inputRua.value = "";
+  inputBairro.value = "";
+  inputCidade.value = "";
+});
