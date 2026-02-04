@@ -5,6 +5,8 @@ const inputRua = document.querySelector("#rua");
 const inputBairro = document.querySelector("#bairro");
 const inputCidade = document.querySelector("#cidade");
 
+let informacoes = JSON.parse(localStorage.getItem("Cidade")) || [];
+
 botao.addEventListener("click", async () => {
   try {
     const valorDoCep = cepInput.value;
@@ -15,7 +17,7 @@ botao.addEventListener("click", async () => {
     }
 
     const resposta = await fetch(
-      `https://viacep.com.br/ws/${valorDoCep}/json/`
+      `https://viacep.com.br/ws/${valorDoCep}/json/`,
     );
 
     if (!resposta.ok) {
