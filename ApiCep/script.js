@@ -5,7 +5,9 @@ const inputRua = document.querySelector("#rua");
 const inputBairro = document.querySelector("#bairro");
 const inputCidade = document.querySelector("#cidade");
 
-let informacoes = JSON.parse(localStorage.getItem("Cidade")) || [];
+let informacoes = JSON.parse(localStorage.getItem("CepCidade")) || [];
+
+cepInput.value = informacoes;
 
 botao.addEventListener("click", async () => {
   try {
@@ -30,6 +32,8 @@ botao.addEventListener("click", async () => {
       alert("CEP não encontrado!");
       return;
     }
+
+    localStorage.setItem("CepCidade", JSON.stringify(valorDoCep));
 
     inputRua.value = dados.logradouro;
     inputBairro.value = dados.bairro;

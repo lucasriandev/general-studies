@@ -1,40 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
     <title>Buscador de CEP</title>
     <style>
-        body { font-family: sans-serif; padding: 40px; background: #eee; }
-        .container { background: white; padding: 20px; max-width: 400px; margin: 0 auto; border-radius: 8px; }
-        input { width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background: #28a745; color: white; border: none; cursor: pointer; }
-        button:hover { background: #218838; }
-        label { font-weight: bold; display: block; margin-top: 10px; }
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+        background: #eee;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        border-radius: 8px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      button:hover {
+        background: #218838;
+      }
+      #btn-recuperar {
+        background: yellow;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(127, 126, 78);
+        }
+      }
+      #btn-apagar {
+        background: red;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: bold;
+
+        &:hover {
+          background-color: rgb(211, 89, 89);
+        }
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <h2>Consultar CEP 🇧🇷</h2>
-        
-        <label>Digite o CEP (apenas números):</label>
-        <input type="text" id="cep-input" placeholder="Ex: 01001000">
-        
-        <button id="btn-buscar">Buscar Endereço</button>
+      <h2>Consultar CEP 🇧🇷</h2>
 
-        <hr>
+      <label>Digite o CEP (apenas números):</label>
+      <input type="text" id="cep-input" placeholder="Ex: 01001000" />
 
-        <label>Rua:</label>
-        <input type="text" id="rua" readonly>
+      <button id="btn-buscar">Buscar Endereço</button>
 
-        <label>Bairro:</label>
-        <input type="text" id="bairro" readonly>
+      <hr />
 
-        <label>Cidade/UF:</label>
-        <input type="text" id="cidade" readonly>
+      <label>Rua:</label>
+      <input type="text" id="rua" readonly />
+
+      <label>Bairro:</label>
+      <input type="text" id="bairro" readonly />
+
+      <label>Cidade/UF:</label>
+      <input type="text" id="cidade" readonly />
+      <button id="btn-recuperar">Recuperar Cep anterior</button>
+      <button id="btn-apagar">Apagar informações</button>
     </div>
-
-</body>
+  </body>
 </html>
