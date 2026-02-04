@@ -7,8 +7,6 @@ const inputCidade = document.querySelector("#cidade");
 
 let informacoes = JSON.parse(localStorage.getItem("CepCidade")) || [];
 
-cepInput.value = informacoes;
-
 botao.addEventListener("click", async () => {
   try {
     const valorDoCep = cepInput.value;
@@ -41,5 +39,12 @@ botao.addEventListener("click", async () => {
   } catch (error) {
     console.log(error);
     alert("Deu algo errado na busca. Verifique o CEP.");
+  }
+});
+
+cepInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    botao.click();
   }
 });
