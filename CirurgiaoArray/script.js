@@ -2,7 +2,7 @@ const input = document.querySelector("#input-musica");
 const add = document.querySelector("#btn-add");
 const ul = document.querySelector("#lista-musicas");
 
-let playlist = [];
+let playlist = JSON.parse(localStorage.getItem("Playlist")) || [];
 
 function atualizarLista() {
   ul.innerHTML = "";
@@ -18,6 +18,7 @@ function atualizarLista() {
 
     novoBotao.addEventListener("click", () => {
       playlist.splice(index, 1); //remove especificamente o botao clicado
+      localStorage.setItem("Playlist", JSON.stringify(playlist));
       atualizarLista();
       novoBotao.classList.add("btn-delete");
     });
@@ -27,11 +28,15 @@ function atualizarLista() {
   });
 }
 
+atualizarLista();
+
 function pushArray() {
   const valor = input.value;
 
   playlist.push(valor);
   console.log(playlist);
+
+  localStorage.setItem("Playlist", JSON.stringify(playlist));
 
   input.value = "";
 }
