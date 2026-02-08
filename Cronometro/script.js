@@ -4,6 +4,12 @@ let cronometrando = false;
 
 const visor = document.querySelector("#tempo");
 
+let tempoAtual = JSON.parse(localStorage.getItem("TempoAtual")) || [];
+if (tempoAtual) {
+  segundos = tempoAtual;
+  atualizarVisor();
+}
+
 const iniciar = document.querySelector("#btn-iniciar");
 const pausar = document.querySelector("#btn-pausar");
 const zerar = document.querySelector("#btn-zerar");
@@ -25,6 +31,7 @@ iniciar.addEventListener("click", () => {
 
   intervalo = setInterval(() => {
     segundos++;
+    salvarTempo();
     atualizarVisor();
   }, 1000);
 });
@@ -32,11 +39,17 @@ iniciar.addEventListener("click", () => {
 pausar.addEventListener("click", () => {
   clearInterval(intervalo);
   cronometrando = false;
+  salvarTempo();
 });
 
 zerar.addEventListener("click", () => {
   clearInterval(intervalo);
   segundos = 0;
+  localStorage.removeItem("TempoAtual");
   atualizarVisor();
   cronometrando = false;
 });
+
+function salvarTempo() {
+  localStorage.setItem("TempoAtual", segundos);
+}
