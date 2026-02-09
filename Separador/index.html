@@ -1,35 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <title>Separador de Numeros</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Separador Automático</h1>
 
-    <input type="number" id="input-num" placeholder="0">
+    <input type="number" id="input-num" placeholder="0" />
     <button id="btn-add">Adicionar</button>
-    <br>
+    <br />
     <button id="btn-separar">SEPARAR NUMEROS</button>
+    <button id="btn-apagar">APAGAR NUMEROS</button>
 
     <div class="container">
-        <div class="box">
-            <h3>Misturado</h3>
-            <ul id="lista-geral"></ul>
-        </div>
-        
-        <div class="box" style="border: 2px solid #3498db;">
-            <h3>Pares</h3>
-            <ul id="lista-pares"></ul>
-        </div>
+      <div class="box">
+        <h3>Misturado</h3>
+        <ul id="lista-geral"></ul>
+      </div>
 
-        <div class="box" style="border: 2px solid #e74c3c;">
-            <h3>Ímpares</h3>
-            <ul id="lista-impares"></ul>
-        </div>
+      <div class="box" style="border: 2px solid #3498db">
+        <h3>Pares</h3>
+        <ul id="lista-pares"></ul>
+      </div>
+
+      <div class="box" style="border: 2px solid #e74c3c">
+        <h3>Ímpares</h3>
+        <ul id="lista-impares"></ul>
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -51,5 +51,3 @@ input.addEventListener("keydown", (e) => {
     adicionar.click();
   }
 });
-
-localStorage.clear();
