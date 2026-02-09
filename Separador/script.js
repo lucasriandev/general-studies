@@ -1,32 +1,55 @@
-let numerosAleatorios = []
+let numerosAleatorios = JSON.parse(localStorage.getItem("Numeros")) || [];
 
-const input = document.querySelector('#input-num')
-const adicionar = document.querySelector('#btn-add')
+const input = document.querySelector("#input-num");
+const adicionar = document.querySelector("#btn-add");
+const separar = document.querySelector("#btn-separar");
 
-let misturados = document.querySelector('#lista-geral')
+let misturados = document.querySelector("#lista-geral");
+let pares = document.querySelector("#lista-pares");
+let impares = document.querySelector("#lista-impares");
 
-adicionar.addEventListener('click', ()=>{
-    const valor = Number(input.value)
-    numerosAleatorios.push(valor)
-    console.log(numerosAleatorios)
+function salvarEmMisturados() {
+  const valor = Number(input.value);
+  if (input.value === "") return;
 
-    misturados.innerHTML += `<li>${valor}</li>` 
-})
+  numerosAleatorios.push(valor);
+  console.log(numerosAleatorios);
 
-let pares = document.querySelector('#lista-pares')
-let impares = document.querySelector('#lista-impares')
+  localStorage.setItem("Numeros", JSON.stringify(numerosAleatorios));
 
-const separar = document.querySelector('#btn-separar')
+  misturados.innerHTML += `<li>${valor}</li>`;
+}
 
-separar.addEventListener('click', ()=>{
-    pares.innerHTML = ''
-    impares.innerHTML = ''
+function separarNumeros() {
+  pares.innerHTML = "";
+  impares.innerHTML = "";
 
-    numerosAleatorios.forEach((numeros)=>{
-        if(numeros % 2 === 0){
-            pares.innerHTML += `<li>${numeros}</li>`
-        } else {
-            impares.innerHTML += `<li>${numeros}</li>`
-        }
-    })
-})
+  numerosAleatorios.forEach((numeros) => {
+    if (numeros % 2 === 0) {
+      pares.innerHTML += `<li>${numeros}</li>`;
+    } else {
+      impares.innerHTML += `<li>${numeros}</li>`;
+    }
+  });
+}
+
+function carregarNaTela() {
+  misturados.innerHTML = "";
+
+  numerosAleatorios.forEach((numero) => {
+    misturados.innerHTML += `<li>${numero}</li>`;
+  });
+}
+
+carregarNaTela();
+separarNumeros();
+
+adicionar.addEventListener("click", salvarEmMisturados);
+separar.addEventListener("click", separarNumeros);
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    adicionar.click();
+  }
+});
+
+localStorage.clear();
