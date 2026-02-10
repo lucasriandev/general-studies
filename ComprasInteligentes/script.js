@@ -16,6 +16,8 @@ function salvarCompras() {
   listaCompras.push(LISTAO);
   localStorage.setItem("Compras", JSON.stringify(listaCompras));
   renderizar();
+
+  input.value = "";
 }
 
 function renderizar() {
@@ -54,3 +56,9 @@ function renderizar() {
 renderizar();
 
 btnAdd.addEventListener("click", salvarCompras);
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    btnAdd.click();
+  }
+});
