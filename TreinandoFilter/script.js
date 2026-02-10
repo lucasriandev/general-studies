@@ -47,3 +47,9 @@ btnLimpar.addEventListener("click", () => {
 renderizar();
 
 btnAdd.addEventListener("click", salvar);
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    btnAdd.click();
+  }
+});
