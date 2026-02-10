@@ -1,41 +1,55 @@
 const lista = document.querySelector("#lista-nomes");
+const add = document.querySelector("#btn-add");
+const sortear = document.querySelector("#btn-sortear");
+const resultado = document.querySelector("#resultado");
+const input = document.querySelector("#input-nome");
+const refazer = document.querySelector("#btn-refazer");
 
-let participantes = [];
+let salvarPessoas = JSON.parse(localStorage.getItem("Ganhador")) || [];
+function addParticipantes() {
+  const valor = input.value;
+  salvarPessoas.push(valor);
+  localStorage.setItem("Ganhador", JSON.stringify(salvarPessoas));
+  console.log(salvarPessoas);
+  input.value = "";
+  renderizar();
+}
 
-function atualizarLista() {
+function renderizar() {
   lista.innerHTML = "";
-
-  participantes.forEach((item) => {
-    let liNovo = document.createElement("li");
-    liNovo.innerText = item;
-
-    liNovo.appendChild(lista);
+  salvarPessoas.forEach((item) => {
+    const novoLI = document.createElement("li");
+    novoLI.innerText = item;
+    lista.appendChild(novoLI);
   });
 }
 
-const input = document.querySelector("#input-nome");
-const add = document.querySelector("#btn-add");
+renderizar();
+
+function sorteio() {
+  const numero = Math.floor(Math.random() * salvarPessoas.length);
+  console.log(numero);
+  resultado.innerHTML = salvarPessoas[numero];
+}
 
 add.addEventListener("click", () => {
-  const valor = input.value;
-
-  if (valor === "") {
-    return;
-  }
-
-  participantes.push(valor);
-  console.log(participantes);
-
-  atualizarLista();
-
-  input.value = "";
+  addParticipantes();
 });
 
-const sortear = document.querySelector("#btn-sortear");
-const resultado = document.querySelector("#resultado");
 sortear.addEventListener("click", () => {
-  const numero = Math.floor(Math.random() * participantes.length);
-  console.log(numero);
+  sorteio();
+});
 
-  resultado.innerHTML = participantes[numero];
+refazer.addEventListener("click", () => {
+  input.value = "";
+  localStorage.removeItem("Ganhador");
+  salvarPessoas = [];
+  resultado.innerHTML = "";
+  lista.innerHTML = "";
+});
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    add.click();
+  }
 });
