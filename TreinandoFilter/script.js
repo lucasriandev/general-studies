@@ -30,6 +30,7 @@ function renderizar() {
     novoLi.innerHTML = `<span>${item.tarefa}</span>`;
     novoLi.addEventListener("click", () => {
       item.concluida = !item.concluida;
+      //como se tivesse mudando a classe riscado
       localStorage.setItem("MinhasTarefas", JSON.stringify(minhasTarefas));
       renderizar();
       input.value;
