@@ -29,6 +29,14 @@ async function buscarCidade() {
       alert("Cidade não encontrada");
       return;
     }
+
+    titulo.innerText = dados.name;
+    temp.innerText = Math.floor(dados.main.temp) + "°C";
+    descricao.innerText = dados.weather[0].description;
+    umidade.innerText = dados.main.humidity;
+    icone.src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}@2x.png`;
+
+    boxResultado.style.display = "bloxk";
   } catch (error) {
     console.log(error);
   } finally {
