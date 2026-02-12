@@ -8,13 +8,11 @@ const descricao = document.querySelector("#descricao");
 const icone = document.querySelector("#icone");
 const umidade = document.querySelector("#umidade");
 
-const API_KEY = "d8c97356247746147424683506941197";
+const API_KEY = "9c4ec1694b42bc83269ee5908a7cbe21";
 
 async function buscarCidade() {
   const cidade = input.value;
-  if (cidade === "") {
-    return;
-  }
+  if (cidade === "") return;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API_KEY}&lang=pt_br&units=metric`;
 
   try {
@@ -26,9 +24,21 @@ async function buscarCidade() {
 
     const dados = await resposta.json();
     console.log(dados);
+
+    if (dados === "404") {
+      alert("Cidade não encontrada");
+      return;
+    }
   } catch (error) {
     console.log(error);
+  } finally {
+    document.body.style.cursor = "default";
   }
 }
 
-buscarCidade();
+buscar.addEventListener("click", buscarCidade);
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    buscar.click();
+  }
+});
