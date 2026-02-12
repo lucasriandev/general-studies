@@ -36,7 +36,7 @@ async function buscarCidade() {
     umidade.innerText = dados.main.humidity;
     icone.src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}@2x.png`;
 
-    boxResultado.style.display = "bloxk";
+    boxResultado.style.display = "block";
   } catch (error) {
     console.log(error);
   } finally {
