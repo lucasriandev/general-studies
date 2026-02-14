@@ -56,6 +56,7 @@ async function buscarDev() {
     input.value = "";
   } catch (error) {
     console.log(error);
+    alert("Usuario nao encontrado");
   }
 }
 
