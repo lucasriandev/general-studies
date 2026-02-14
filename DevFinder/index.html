@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="busca">
+        <input
+          type="text"
+          id="usuario"
+          placeholder="Digite o user (ex: lucasriandev)"
+        />
+        <button id="btn-buscar">Buscar</button>
+      </div>
+
+      <div class="perfil" id="perfil-box">
+        <img id="avatar" src="" alt="Avatar" />
+        <h2 id="nome">Nome do Dev</h2>
+        <p id="bio">Bio do Dev</p>
+
+        <div class="stats">
+          <div>
+            <strong id="seguidores">0</strong>
+            <span>Seguidores</span>
+          </div>
+          <div>
+            <strong id="seguindo">0</strong>
+            <span>Seguindo</span>
+          </div>
+          <div>
+            <strong id="repos">0</strong>
+            <span>Repos</span>
+          </div>
+        </div>
+
+        <h3>📂 Últimos Repositórios</h3>
+        <ul id="lista-repos"></ul>
+      </div>
+    </div>
+  </body>
+</html>
