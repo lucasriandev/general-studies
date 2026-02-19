@@ -11,6 +11,9 @@ const repositorio = document.querySelector("#repos");
 
 const listaRepos = document.querySelector("#lista-repos");
 
+let usuarioAtual = null;
+let favoritos = JSON.parse(localStorage.getItem("FAVORITOS")) || [];
+
 async function buscarDev() {
   const usuario = input.value;
   if (usuario === "") return;
@@ -33,6 +36,7 @@ async function buscarDev() {
 
     perfilBox.style.display = "block";
 
+    usuarioAtual = dadosPerfil;
     //-------------------------------------------------
 
     const respostaBruta = await fetch(
@@ -66,3 +70,8 @@ input.addEventListener("keydown", (e) => {
     btn.click();
   }
 });
+
+// segunda parte
+
+const btnFavoritar = document.querySelector("#btn-favoritar");
+btnFavoritar.addEventListener("click", () => {});
