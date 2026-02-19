@@ -74,4 +74,18 @@ input.addEventListener("keydown", (e) => {
 // segunda parte
 
 const btnFavoritar = document.querySelector("#btn-favoritar");
-btnFavoritar.addEventListener("click", () => {});
+btnFavoritar.addEventListener("click", () => {
+  if (usuarioAtual === null) return;
+
+  const jaExisteLa = favoritos.some((item) => item.id === usuarioAtual.id);
+
+  if (jaExisteLa) {
+    alert("Esse usuario já esta nos favoritos");
+    return;
+  }
+
+  favoritos.push(usuarioAtual);
+  localStorage.setItem("FAVORITOS", JSON.stringify(favoritos));
+
+  alert("USUARIO SALVO COM SUCESSO");
+});
