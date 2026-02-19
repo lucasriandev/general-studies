@@ -41,6 +41,20 @@ button {
   }
 }
 
+#btn-favoritar {
+  padding: 10px 20px;
+  background: #dafb31;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    background: #7c8c2e;
+  }
+}
+
 .perfil {
   background: #161b22;
   padding: 20px;
