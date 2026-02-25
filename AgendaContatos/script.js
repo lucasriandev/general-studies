@@ -3,8 +3,6 @@ const inputTel = document.querySelector("#input-tel");
 const ul = document.querySelector("#lista-contatos");
 const btnSalvar = document.querySelector("#btn-add");
 
-localStorage.clear();
-
 let minhaAgenda = JSON.parse(localStorage.getItem("Agenda")) || [];
 
 function renderizar() {
