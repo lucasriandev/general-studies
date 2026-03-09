@@ -37,6 +37,12 @@ function renderizar() {
       input.value = "";
     });
 
+    const comprados = listaCompras.reduce((acc, item) => {
+      return item.comprado ? acc + 1 : acc;
+    }, 0);
+
+    console.log(comprados);
+
     const btnDelete = document.createElement("button");
     btnDelete.innerHTML = "🗑️";
     btnDelete.classList.add("btn-delete");
