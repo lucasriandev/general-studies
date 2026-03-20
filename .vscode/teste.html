@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevHabits 🎯</title>
+    <script src="./teste.js" defer></script>
+    <link rel="stylesheet" href="teste.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Dev<span>Habits</span></h1>
+        <form id="form-habito">
+          <input
+            type="text"
+            id="input-tarefa"
+            placeholder="Ex: Estudar React por 1 hora"
+          />
+          <button type="submit">Adicionar</button>
+        </form>
+      </header>
+
+      <div class="painel">
+        <div class="coluna">
+          <h2>Focar Hoje ⏳</h2>
+          <ul id="lista-pendentes"></ul>
+        </div>
+
+        <div class="coluna">
+          <h2>Concluídos ✅</h2>
+          <ul id="lista-concluidos"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
