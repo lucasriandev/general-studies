@@ -36,8 +36,9 @@ function renderizar() {
     novoLi.classList.add("tarefa");
 
     const btnApagar = document.createElement("button");
-    btnApagar.innerText = "apagar";
+    btnApagar.innerText = "Apagar";
     btnApagar.classList.add("apagar");
+    btnApagar.style.background = "red";
 
     btnApagar.addEventListener("click", () => {
       tarefas.splice(index, 1);
