@@ -32,6 +32,18 @@ function renderizar() {
     novoLi.innerHTML = item.texto;
     novoLi.classList.add("tarefa");
 
+    const btnDelete = document.createElement("button");
+    btnDelete.innerText = "Apagar";
+    btnDelete.style.background = "red";
+
+    btnDelete.addEventListener("click", () => {
+      tarefas.splice(index, 1);
+      localStorage.setItem("tarefas", JSON.stringify(tarefas));
+      renderizar();
+    });
+
+    novoLi.appendChild(btnDelete);
+
     if (item.status === "pendente") {
       const btnConcluir = document.createElement("button");
       btnConcluir.innerHTML = "Concluido";
