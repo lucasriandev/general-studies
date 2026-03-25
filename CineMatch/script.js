@@ -9,6 +9,10 @@ form.addEventListener("submit", (e) => {
 
   const valor = input.value;
 
+  if (valor === "") {
+    return;
+  }
+
   const objFilmes = {
     id: Date.now(),
     titulo: valor,
@@ -23,22 +27,47 @@ form.addEventListener("submit", (e) => {
 
 function renderizar() {
   listaFilmes.innerHTML = "";
+
   filme.forEach((item, index) => {
     const novaDiv = document.createElement("div");
     novaDiv.classList.add("card-filme");
-    novaDiv.innerHTML = `<li>${item.titulo}</li>`;
 
-    if (item.favorito === true) {
-      const novoBtn = document.createElement("button");
-      novoBtn.classList.add("favoritado");
-      novoBtn.innerHTML = "❤️";
-      novoBtn.addEventListener("click", () => {});
-      novaDiv.appendChild(novoBtn);
+    const tituloFilme = document.createElement("h3");
+    tituloFilme.innerHTML = item.titulo;
+
+    const btnApagar = document.createElement("button");
+    btnApagar.innerHTML = "Apagar";
+    btnApagar.addEventListener("click", () => {
+      filme.splice(index, 1);
+      localStorage.setItem("FILME", JSON.stringify(filme));
+      renderizar();
+    });
+
+    const btn1 = document.createElement("button");
+    btn1.classList.add("btn-favorito");
+
+    if (item.favorito) {
+      btn1.innerHTML = "❤️";
+      novaDiv.classList.add("favoritado");
     } else {
-      novoBtn.innerHTML = "🤍";
+      btn1.innerHTML = "🤍";
     }
+
+    btn1.addEventListener("click", () => {
+      const filmeAchado = filme.find((it) => it.id === item.id);
+
+      filmeAchado.favorito = !filmeAchado.favorito;
+
+      localStorage.setItem("FILME", JSON.stringify(filme));
+      renderizar();
+    });
+
+    novaDiv.appendChild(tituloFilme);
+    novaDiv.appendChild(btn1);
+    novaDiv.appendChild(btnApagar);
 
     listaFilmes.appendChild(novaDiv);
   });
 }
+
 renderizar();
