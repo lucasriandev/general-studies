@@ -31,12 +31,20 @@ function renderizar() {
     novoLi.classList.add("card-jogador");
     novoLi.innerHTML = `
         <h3>${item.titulo}</h3>
+        <button class="apagar">🗑️</button>
         <div class="controles">
             <button class="btn-menos menos">-</button>
             <span class="pontos">${item.pontos}</span>
             <button class="btn-mais mais">+</button>
         </div>
     `;
+
+    const btnApagar = novoLi.querySelector(".apagar");
+    btnApagar.addEventListener("click", () => {
+      jogadores.splice(index, 1);
+      localStorage.setItem(CHAVE, JSON.stringify(jogadores));
+      renderizar();
+    });
 
     const btnMais = novoLi.querySelector(".mais");
     btnMais.addEventListener("click", () => {
