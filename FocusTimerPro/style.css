@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background: #121214;
+  color: #e1e1e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: #202024;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+header h1 span {
+  color: #04d361;
+}
+header p {
+  color: #8d8d99;
+  margin-top: 5px;
+  font-family: sans-serif;
+}
+
+.timer-display {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 40px 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dois-pontos {
+  color: #04d361;
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.controles {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.btn-play {
+  background: #04d361;
+  color: #000;
+}
+.btn-play:hover {
+  background: #00b35e;
+}
+
+.btn-pause {
+  background: #eab308;
+  color: #000;
+}
+.btn-pause:hover {
+  background: #ca8a04;
+}
+
+.btn-stop {
+  background: #f75a68;
+  color: #fff;
+}
+.btn-stop:hover {
+  background: #e03131;
+}
