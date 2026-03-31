@@ -1,9 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=], initial-scale=1.0" />
-    <title>DevCLICKER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevClicker - CPS Test 🖱️</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Dev<span>Clicker</span></h1>
+        <p>Quantos cliques você consegue dar em 10 segundos?</p>
+      </header>
+
+      <div class="placar">
+        <div class="caixa-status">
+          <h2>Tempo: <span id="tempo-restante">10</span>s</h2>
+        </div>
+        <div class="caixa-status">
+          <h2>Cliques: <span id="contador-cliques">0</span></h2>
+        </div>
+      </div>
+
+      <button id="btn-iniciar" class="btn-start">Iniciar Teste</button>
+
+      <div id="area-clique" class="click-area">
+        <h3>CLIQUE AQUI!</h3>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
