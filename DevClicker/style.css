@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 36px;
+}
+header h1 span {
+  color: #f59e0b;
+}
+header p {
+  color: #94a3b8;
+  margin: 10px 0 30px 0;
+}
+
+.placar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.caixa-status h2 {
+  font-size: 24px;
+  color: #cbd5e1;
+}
+.caixa-status span {
+  color: #f59e0b;
+  font-weight: bold;
+  font-size: 32px;
+  display: block;
+  margin-top: 5px;
+}
+
+.btn-start {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+.btn-start:hover {
+  background: #2563eb;
+}
+.btn-start:disabled {
+  background: #475569;
+  cursor: not-allowed;
+}
+
+.click-area {
+  background: #334155;
+  border: 4px dashed #475569;
+  border-radius: 12px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s;
+  user-select: none;
+}
+.click-area:active {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  transform: scale(0.98);
+}
+.click-area h3 {
+  font-size: 28px;
+  color: #94a3b8;
+  pointer-events: none;
+}
