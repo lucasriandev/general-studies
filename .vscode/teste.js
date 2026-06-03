@@ -1,78 +1,37 @@
-const form = document.querySelector("#form-habito");
-const input = document.querySelector("#input-tarefa");
+const botao = document.querySelector(".add");
+const lista = document.querySelector(".lista");
+const input = document.querySelector(".input");
 
-const listaPendentes = document.querySelector("#lista-pendentes");
-const listaConcluidos = document.querySelector("#lista-concluidos");
+let listao = [];
 
-let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+function salvar() {
   const valor = input.value;
+  listao.push(valor);
+  console.log(listao);
 
-  const novasTarefas = {
-    id: Date.now(),
-    texto: valor,
-    status: "pendente",
-  };
-
-  tarefas.push(novasTarefas);
-  localStorage.setItem("tarefas", JSON.stringify(tarefas));
-
-  renderizar();
   input.value = "";
-});
+  renderizar();
+}
 
 function renderizar() {
-  listaConcluidos.innerHTML = "";
-  listaPendentes.innerHTML = "";
+  lista.innerHTML = "";
 
-  tarefas.forEach((item, index) => {
-    const novoLi = document.createElement("li");
-    novoLi.innerHTML = item.texto;
-    novoLi.classList.add("tarefa");
+  listao.forEach((item, index) => {
+    const Li = document.createElement("li");
+    Li.innerHTML = item;
 
-    const btnDelete = document.createElement("button");
-    btnDelete.innerText = "Apagar";
-    btnDelete.style.background = "red";
-
-    btnDelete.addEventListener("click", () => {
-      tarefas.splice(index, 1);
-      localStorage.setItem("tarefas", JSON.stringify(tarefas));
+    const del = document.createElement("button");
+    del.innerHTML = "X";
+    del.addEventListener("click", () => {
+      listao.splice(index, 1);
       renderizar();
     });
 
-    novoLi.appendChild(btnDelete);
-
-    if (item.status === "pendente") {
-      const btnConcluir = document.createElement("button");
-      btnConcluir.innerHTML = "Concluido";
-
-      btnConcluir.addEventListener("click", () => {
-        const concluidosss = tarefas.find((con) => con.id === item.id);
-        concluidosss.status = "concluido";
-        localStorage.setItem("tarefas", JSON.stringify(tarefas));
-        renderizar();
-      });
-      novoLi.appendChild(btnConcluir);
-      listaPendentes.appendChild(novoLi);
-    }
-
-    if (item.status === "concluido") {
-      novoLi.classList.add("feita");
-      const btnDesfazer = document.createElement("button");
-      btnDesfazer.innerHTML = "Desfazer";
-
-      btnDesfazer.addEventListener("click", () => {
-        const pendentesss = tarefas.find((pend) => pend.id === item.id);
-        pendentesss.status = "pendente";
-        localStorage.setItem("tarefas", JSON.stringify(tarefas));
-        renderizar();
-      });
-      novoLi.appendChild(btnDesfazer);
-      listaConcluidos.appendChild(novoLi);
-    }
+    Li.appendChild(del);
+    lista.appendChild(Li);
   });
 }
 
 renderizar();
+
+botao.addEventListener("click", salvar);
